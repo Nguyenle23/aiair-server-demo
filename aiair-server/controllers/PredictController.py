@@ -61,8 +61,8 @@ class PredictController:
         input_data = padded_temp.reshape((1, 1, sequence_length))
         
         # Load model LSTM
-        temp_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/test-lstm.json')
-        temp_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/test_lstm_weight.h5')
+        temp_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/test-lstm.json')
+        temp_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/test_lstm_weight.h5')
         with open(temp_lstm_json, 'r') as json_file:
             loaded_model_json_lstm = json_file.read()
         
@@ -70,8 +70,8 @@ class PredictController:
         loaded_model_lstm.load_weights(temp_lstm_weight)
 
         # Load model BPNN (json and h5)
-        temp_bpnn_json = os.path.join(server_dir, 'aiair-server/datasets/models/prophet-lstm/temp-bpnn-model.json')
-        temp_bpnn_weight = os.path.join(server_dir, 'aiair-server/datasets/models/prophet-lstm/temp-bpnn-model.h5')
+        temp_bpnn_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/prophet-lstm/temp-bpnn-model.json')
+        temp_bpnn_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/prophet-lstm/temp-bpnn-model.h5')
         with open(temp_bpnn_json, 'r') as json_file:
             loaded_model_json_bpnn = json_file.read()
 
@@ -458,8 +458,8 @@ class PredictController:
         input_data = padded_temp.reshape((1, 1, sequence_length))
         
         # Load model architecture from JSON file
-        temp_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/test-lstm.json')
-        temp_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/test_lstm_weight.h5')
+        temp_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/test-lstm.json')
+        temp_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/test_lstm_weight.h5')
         with open(temp_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
@@ -531,8 +531,8 @@ class PredictController:
             padded_humi = scaled_humi[-sequence_length:]
         input_data = padded_humi.reshape((1, 1, sequence_length))
         
-        humi_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/humi-lstm.json')
-        humi_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/humi_lstm_weight.h5')
+        humi_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/humi-lstm.json')
+        humi_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/humi_lstm_weight.h5')
         with open(humi_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
@@ -586,8 +586,8 @@ class PredictController:
             padded_co2 = scaled_co2[-sequence_length:]
         input_data = padded_co2.reshape((1, 1, sequence_length))
         
-        co2_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/co2-lstm.json')
-        co2_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/co2_lstm_weight.h5')
+        co2_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/co2-lstm.json')
+        co2_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/co2_lstm_weight.h5')
         with open(co2_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
@@ -641,8 +641,8 @@ class PredictController:
             padded_co = scaled_co[-sequence_length:]
         input_data = padded_co.reshape((1, 1, sequence_length))
         
-        co_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/co-lstm.json')
-        co_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/co_lstm_weight.h5')
+        co_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/co-lstm.json')
+        co_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/co_lstm_weight.h5')
         with open(co_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
@@ -696,8 +696,8 @@ class PredictController:
             padded_uv = scaled_uv[-sequence_length:]
         input_data = padded_uv.reshape((1, 1, sequence_length))
         
-        uv_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/uv-lstm.json')
-        uv_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/uv_lstm_weight.h5')
+        uv_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/uv-lstm.json')
+        uv_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/uv_lstm_weight.h5')
         with open(uv_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
@@ -751,8 +751,8 @@ class PredictController:
             padded_pm25 = scaled_pm25[-sequence_length:]
         input_data = padded_pm25.reshape((1, 1, sequence_length))
         
-        pm25_lstm_json = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/pm25-lstm.json')
-        pm25_lstm_weight = os.path.join(server_dir, 'aiair-server/datasets/models/lstm/pm25_lstm_weight.h5')
+        pm25_lstm_json = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/pm25-lstm.json')
+        pm25_lstm_weight = os.path.join(server_dir, 'aiair-server-demo/aiair-server/datasets/models/lstm/pm25_lstm_weight.h5')
         with open(pm25_lstm_json, 'r') as json_file:
             loaded_model_json = json_file.read()
         
